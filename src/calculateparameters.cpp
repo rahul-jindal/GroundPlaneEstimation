@@ -408,8 +408,8 @@ int main()
 	 * Now we go forward and use projections of head and foot as the starting point.
 	 */
 
-	std::fstream height_za_zb;
-	height_za_zb.open("src/height_za_zb.txt", std::fstream::out | std::fstream::trunc);
+//	std::fstream height_za_zb;
+//	height_za_zb.open("src/height_za_zb.txt", std::fstream::out | std::fstream::trunc);
 
 	std::ifstream synthetic_data_file("src/Synthetic_Data.txt");
 	std::string line;
@@ -560,8 +560,8 @@ int main()
 		float person_height_4_1,person_height_4_2;
 		boost::tie(person_height_4_1,person_height_4_2) = person_height(estimated_height,tan_theta_1A,tan_theta_1B, height_DistA_root2,heightandDistA2_DistB_root2);
 
-		float avg_person_height = (person_height_1_1+person_height_1_2 + person_height_2_1+person_height_2_2 + person_height_2_1+person_height_2_2
-				+ person_height_4_1+person_height_4_2) / 8;
+		float avg_person_height = (person_height_1_1 + person_height_1_2 + person_height_2_1 + person_height_2_2 + person_height_2_1 + person_height_2_2
+				+ person_height_4_1 + person_height_4_2) / 8;
 
 		cout << estimated_height<<" "<<height_DistA_root1<<" "<<height_DistA_root2<<" "<<heightandDistA1_DistB_root1<<" "<< heightandDistA1_DistB_root2<<" "<<avg_person_height<<endl;
 
